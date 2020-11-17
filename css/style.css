@@ -4,6 +4,35 @@
 
 body {
     position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 300px 300px 300px 1fr;
+    grid-template-columns: 300px 300px 300px 1fr;
+    grid-gap: 100px;
+}
+
+.card {
+    border: 1px solid #d3d3d3;
+}
+
+.avatar {
+    display: flex;
+    margin: 20px;
+    width: 128px;
+    height: 128px;
+    border: 1px solid #d3d3d3;
+    border-radius: 50%;
+}
+
+.text-container {
+    margin: 20px;
+}
+.text-container p {
+    font-size: .75em;
+
 }
 
 .overlay {
