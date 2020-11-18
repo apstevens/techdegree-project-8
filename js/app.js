@@ -28,7 +28,7 @@ function displayEmployees(employeeData) {
     employees.forEach((employee, index) => {
         let name = employee.name;
         let email = employee.email;
-        let city = employee.city;
+        let city = employee.location.city;
         let picture = employee.picture;
 
         // template literals make this much cleaner!

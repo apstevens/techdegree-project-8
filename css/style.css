@@ -7,24 +7,38 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+    margin: 20px;
+}
+
 .grid-container {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 100px;
+    grid-gap: 20px;
 }
 
 .card {
     border: 1px solid #d3d3d3;
+    transition: ease-in 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background-color: aqua;
+    cursor: pointer;
 }
 
 .avatar {
-    display: flex;
     margin: 20px;
     width: 128px;
     height: 128px;
     border: 1px solid #d3d3d3;
     border-radius: 50%;
+}
+
+.card-container {
+    display: flex;
 }
 
 .text-container {
