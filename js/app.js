@@ -50,8 +50,8 @@ function displayEmployees(employeeData) {
 function displayModal(index){
 
     // use object destructuring to make template literal cleaner
-    let {name, dob, email, location: { city, street, state, postcode},
- picture } = employees[index];
+    let { name, dob, email, location: { city, street, state, postcode
+    }, picture } = employees[index];
 
  let date = new Date(dob.date);
 
@@ -79,6 +79,7 @@ gridContainer.addEventListener('click', e => {
     clicked
      const card = e.target.closest(".card");
      const index = card.getAttribute('data-index');
+
      displayModal(index);
     }
 });
