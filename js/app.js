@@ -90,3 +90,10 @@ gridContainer.addEventListener('click', e => {
 
 
 }
+
+// searchInput.addEventListener('keyup', (e) => {
+//     const index = document.querySelectorAll('.card');
+//     if(searchInput.value.length > 0) {
+
+//     }
+// });
