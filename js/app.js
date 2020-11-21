@@ -65,9 +65,8 @@ function displayModal(index) {
     <p class="address">${city}</p>
     <hr />
     <p>${phone}</p>
-    <p class="address">${street}, ${state} ${postcode}</p>
-    <p>Birthday:
-    ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+    <p class="address">${street}, ${city}, ${state} ${postcode}</p>
+    <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
     </div>
     `;
 
@@ -79,10 +78,11 @@ function displayModal(index) {
 gridContainer.addEventListener('click', e => {
     // make sure the click is not on the gridContainer itself
     if (e.target !== gridContainer) {
-        // select the card element based on its proximity to actual element
-        clicked
+        // select the card element based on its proximity to actual element clicked
+
         const card = e.target.closest(".card");
         const index = card.getAttribute('data-index');
+
         displayModal(index);
     }
 });
