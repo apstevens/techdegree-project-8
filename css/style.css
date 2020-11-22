@@ -19,13 +19,16 @@ h1 {
 .search-container {
   position: absolute;
   top: 0;
-  right: 10px;
+  right: 380px;
   margin-right: 20px;
-  border-radius: 5px;
 }
 
 input {
+  width: 500px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
   transition: ease-in-out 0.5s;
+  
 }
 .search-container input:hover {
   transform: scale(1.1);
