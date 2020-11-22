@@ -16,6 +16,30 @@ h1 {
     width: 90%;
 }
 
+.search-container {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+input {
+  transition: ease-in-out 0.5s;
+}
+.search-container input:hover {
+  transform: scale(1.1);
+}
+
+input[placeholder="Search..."]  {
+  color: #000;
+  padding: 5px 0 5px 15px;
+}
+
+.search-container input:focus {
+  outline: none;
+}
+
 .grid-container {
     display: grid;
     grid-template-rows: 300px 300px 1fr;

@@ -45,6 +45,25 @@ function displayEmployees(employeeData) {
     `;
 });
     gridContainer.innerHTML = employeeHTML;
+
+    const search = document.getElementById('search');
+    const names = document.querySelectorAll('.text-container h2');
+
+    function searchDirectory() {
+        const searchEmployee = search.value.toLowerCase();
+        names.forEach(name => {
+            const cardName = name.textContent.toLowerCase();
+            const card = name.parentElement.parentElement;
+
+            if(cardName.indexOf(searchEmployee) > -1 ) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    };
+
+    search.addEventListener('keyup', searchDirectory);
 }
 
 function displayModal(index) {
@@ -65,7 +84,7 @@ function displayModal(index) {
     <p class="address">${city}</p>
     <hr />
     <p>${phone}</p>
-    <p class="address">${street}, ${city}, ${state} ${postcode}</p>
+    <p class="address">${street.number}, ${street.name}, ${city}, ${state} ${postcode}</p>
     <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
     </div>
     `;
@@ -73,6 +92,7 @@ function displayModal(index) {
     overlay.classList.remove("hidden");
 
     modalContainer.innerHTML = modalHTML;
+    
 }
 
 gridContainer.addEventListener('click', e => {
